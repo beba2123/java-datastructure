@@ -8,6 +8,7 @@ class LinkedList{
     public void insert(int data){   //every time that we an insert we create a node which has data and adress of next node.
       Node node = new Node();
       node.data = data;
+      node.next =null;
        if(head==null){
         head = node;
        }else {
