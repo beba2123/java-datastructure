@@ -1,12 +1,10 @@
-
-
 class Node{
     int data;
     Node next;
 
 }
 class LinkedList{
-     Node head; //this one is used for refrencing our first noad
+     Node head; //this one is used for refrencing our first node
     public void insert(int data){   //every time that we an insert we create a node which has data and adress of next node.
       Node node = new Node();
       node.data = data;
@@ -21,7 +19,7 @@ class LinkedList{
            n.next = node;
        }
     }
-
+ 
 
     public void insertAtStart(int data){
 
@@ -40,8 +38,8 @@ class LinkedList{
         Node n = head;
         if (index==0){
             insertAtStart(data);
-            return;
-        }
+            
+        }else{
         for(int i =0; i<index-1;  i++){
             n=n.next;
         }
@@ -49,7 +47,7 @@ class LinkedList{
         n.next  = node;
     }
     
-
+    }
     public void show(){
 
         Node node = head;
