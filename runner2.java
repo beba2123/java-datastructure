@@ -28,8 +28,8 @@ class LinkedList{
        Node node = new Node(); // don't forget everytime that we create an object it creates an id.. for that location that we created
        node.data = data;
        //node.next = null;
-       node.next = head;
-       head = node;
+       node.next = head;   // this means we make the current id adress the previous home adress
+       head = node;  // the new created data will be the head.
        
     }
 
