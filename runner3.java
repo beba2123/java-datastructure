@@ -40,6 +40,7 @@ class LinkedList{
         Node n = head;
         if (index==0){
             insertAtStart(data);
+            return;
         }
         for(int i =0; i<index-1;  i++){
             n=n.next;
@@ -71,7 +72,7 @@ public class runner3 {
         list.insert(42);
         list.insert(32);
         list.insertAtStart(36);
-        list.insertAtAnywhere(2, 49);
+        list.insertAtAnywhere(0, 49);
         list.show();
 }
 }
