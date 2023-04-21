@@ -48,10 +48,10 @@ class LinkedList{
     }
     
     }
-    public void deleteAt(int index){
-        if(index==0){
+    public void deleteAt(int index){ //for deleting the list value in the linked list 
+        if(index==0){  //the index zero is the exception one..
             head = head.next;
-        }else{
+        }else{   
             Node n = head;
             Node n1 = null;
             for(int i=0;i<index-1;i++){
