@@ -13,6 +13,12 @@ class stack{
        
         return data;
     }
+    public int peek(){
+      
+        data=stack[lastValue-1];
+
+        return data;
+    }
     public void show(){
         for( int n : stack){
             System.out.println(n + " ");
@@ -30,8 +36,9 @@ public class runner5 {
         nums.push(12);
         nums.push(24);
         nums.push(48);
+        System.out.println(nums.peek());
         nums.push(60);
-        
+      
         System.out.println(nums.pop());
 
         nums.show();
