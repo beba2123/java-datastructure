@@ -7,6 +7,7 @@ class stack{
         lastValue++;
     }
     public int pop(){
+        lastValue--;
         data = stack[lastValue];
         stack[lastValue]=0;
        
@@ -30,7 +31,8 @@ public class runner5 {
         nums.push(24);
         nums.push(48);
         nums.push(60);
-
+        
+        System.out.println(nums.pop());
 
         nums.show();
     }
