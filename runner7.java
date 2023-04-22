@@ -26,9 +26,19 @@ class Dynamicstack{
         lastValue--;
         data = stack[lastValue];
         stack[lastValue]=0;   
+        shrink();
     }
     return data;
 }
+    private void shrink(){
+        int length = size();
+    if(length <= (capacity/2)/2)
+      capacity = capacity/2;
+    
+      int newStack[] = new int[capacity];
+      System.arraycopy(stack, 0, newStack, 0, length);
+      stack = newStack;
+    }
     public int peek(){
       
         data=stack[lastValue-1];
@@ -66,6 +76,11 @@ public class runner7 {
         nums.push(4445);
         System.out.println("the size of the stack is " + nums.size());
         System.out.println("empty = " + nums.isEmpty());
+
+        nums.pop();
+        nums.pop();
+        nums.pop();
+        nums.pop();
         nums.show();
     }
 }
