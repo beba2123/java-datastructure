@@ -13,3 +13,4 @@ in linkedlist the advantage is we can expand but the disadv is they are very slo
 
 Stack 
 it is one of the abstract data  type. it has so many features like add(push), delete(pop), find(peek). it uses the lifo method which means last in first out .when the stack is full and if we try to store a data inside it , it create  an error it is called overflow and if there is no value inside the stack and if we try to delete(pop) it creates an error called underflow error. 
+you can implement the stack using the dynamic array it means that when you will expand or shrink your number of stack based on what you want.
