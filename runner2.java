@@ -30,7 +30,7 @@ class LinkedList{
        //node.next = null;
        node.next = head;   // this means we make the current id adress the previous home adress
        head = node;  // the new created data will be the head.
-       
+
     }
 
     public void show(){
