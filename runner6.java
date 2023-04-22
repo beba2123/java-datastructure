@@ -3,16 +3,24 @@ class stack{
     int stack[] = new int[5];
     int lastValue=0;
     public void push(int data){
+        if(lastValue==5){
+            System.out.println("the stack is full...");
+        }else{
         stack[lastValue] = data;
         lastValue++;
     }
+}
     public int pop(){
+        if(isEmpty()){
+            System.out.println("the size is empty we cannot delete it..?");
+
+        }else{
         lastValue--;
         data = stack[lastValue];
-        stack[lastValue]=0;
-       
-        return data;
+        stack[lastValue]=0;   
     }
+    return data;
+}
     public int peek(){
       
         data=stack[lastValue-1];
@@ -46,7 +54,8 @@ public class runner6 {
         nums.push(48);
         System.out.println(nums.peek());
         nums.push(60);
-      
+        nums.push(76);
+        nums.push(4445);
         System.out.println("the size of the stack is " + nums.size());
         System.out.println("empty = " + nums.isEmpty());
         nums.show();
