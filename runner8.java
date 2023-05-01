@@ -6,8 +6,8 @@ public class runner8 {
         Q.enQueue(7);
         Q.enQueue(8);
 
-        Q.deQueue();
-        Q.deQueue();
+         Q.deQueue();
+         Q.deQueue();
 
         Q.enQueue(18);
         Q.enQueue(28);
@@ -39,12 +39,14 @@ class Queue{
         size --;
         }else
           System.out.println(" The stack is Empty.. ");
-        return data;
+       
+      return data;
      }
      public void show(){
         System.out.print( "elements : " );
          for(int i=0;i<size;i++){
-            System.out.print(Queue[(i + front)%5] + "  ");
+            System.out.print(Queue[(i + front)%5] + "  ");  // we add front  becouse let say we remove an elements
+            // from the array soo the moment we remove the first elemet the front  value will  be the second value that is the reason.
          }
          System.out.println("  ");
          for(int n : Queue ){
