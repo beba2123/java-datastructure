@@ -24,15 +24,21 @@ class Queue{
      int rear;
      int front=0;
      public void enQueue(int data){
-       Queue[rear]= data;
-         rear = (rear + 1)%5;
-         size++;
+       if(!isFull()){
+        Queue[rear]= data;
+        rear = (rear + 1)%5;
+        size++;
+       }else{
+         System.out.println(" The Queue is Full ");
+       }
      }
      public int deQueue(){
-       int data  = Queue[front];
+        int data  = Queue[front];
+        if(!isEmpty()){
         front = (front + 1)%5;
         size --;
-
+        }else
+          System.out.println(" The stack is Empty.. ");
         return data;
      }
      public void show(){
@@ -44,6 +50,15 @@ class Queue{
          for(int n : Queue ){
             System.out.print(n + " ");
          }
+     }
+     public int getSize(){
+        return size;
+     }
+     public boolean isEmpty(){
+        return getSize()==0;
+     }
+     public boolean isFull(){
+        return getSize()==5;
      }
      
 }
