@@ -30,7 +30,7 @@ class LinkedList{
        head = node;  // the new created data will be the head.
        
     }
-    public void insertAtAnywhere(int index, int data){
+    public void inasertAtAnywhere(int index, int data){
         Node node = new Node();
         node.data= data;
         node.next = null;
@@ -70,7 +70,7 @@ public class runner3 {
         list.insert(42);
         list.insert(32);
         list.insertAtStart(36);
-        list.insertAtAnywhere(0, 49);
+        list.inasertAtAnywhere(0, 49);
         list.show();
 } 
 }
